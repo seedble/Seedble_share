@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="menu_tech_radar_root"
+              name="Tech Radar"
+              sequence="10"
+    />
+</odoo>

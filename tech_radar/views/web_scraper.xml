@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_web_scraper" model="ir.actions.act_window">
+        <field name="name">Keyword Scan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">web.scraper</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="web_scraper_menu"
+              name="Keyword Scan"
+              parent="menu_tech_radar_root"
+              action="action_web_scraper"
+              sequence="10"/>
+</odoo>

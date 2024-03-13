@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_create_entry" model="ir.actions.act_window">
+        <field name="name">ChatGPT Conversations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">entries.list</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="entries_menu"
+              name="ChatGPT Conversations"
+              parent="menu_tech_radar_root"
+              action="action_create_entry"
+              sequence="10"/>
+</odoo>
