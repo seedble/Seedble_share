@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="blendx_security_role_view_search" model="ir.ui.view">
+        <field name="name">blendx.security.role.search</field>
+        <field name="model">blendx.security.role</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="user_ids"/>
+                <filter string="Archived"
+                        name="inactive"
+                        domain="[('active', '=', False)]"
+                />
+            </search>
+        </field>
+    </record>
+    <record id="blendx_security_role_view_form" model="ir.ui.view">
+        <field name="name">blendx.security.role.form</field>
+        <field name="model">blendx.security.role</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_create_user"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-user"
+                        >
+                            New user
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Role" class="oe_inline"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="user_ids"
+                               widget="many2many_tags"
+                               options="{'no_create_edit': 1, 'no_quick_create': 1}"
+                        />
+                        <field name="active" invisible="1"/>
+                    </group>
+<!--                    <group string="Intent">-->
+<!--                        <field name="blendx_intent_ids" widget="many2many_tags"/>-->
+<!--                    </group>-->
+                    <notebook colspan="4">
+                        <page name="access_rights" string="Access Rights">
+                            <field name="group_ids"/>
+                        </page>
+                        <!--
+                        <page string="Temporary Activation &amp; Blocking">
+                            <button name="action_refresh_blockings"
+                                    type="object"
+                                    class="oe_highlight pull-right"
+                                    string="Refresh"
+                            />
+                            <div class="text-muted">
+                                Define advanced rules for temporary assigning or removing roles to users. For example,
+                                remove a user from the current role while on vacation ("Temporary Blocking"). Or, on the
+                                contrary, give the rights to this role to the employee replacing him ("Temporary
+                                Activation"). The app will periodically check the rules, and if needed will add or
+                                unlink users to the role
+                            </div>
+                            <field name="rule_ids">
+                                <tree>
+                                    <field name="user_id"/>
+                                    <field name="rule_type"/>
+                                    <field name="name" string="Periods" class=""/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <field name="user_id"
+                                                   options="{'no_create_edit': 1, 'no_quick_create': 1}"/>
+                                            <field name="rule_type"/>
+                                            <field name="name" string="Periods" invisible="1"/>
+                                        </group>
+                                        <field name="period_ids">
+                                            <tree editable="top">
+                                                <field name="period_start"/>
+                                                <field name="period_end"/>
+                                            </tree>
+                                            <form>
+                                                <sheet>
+                                                    <group>
+                                                        <label for="period_start" string="Period"/>
+                                                        <div class="oe_inline">
+                                                            <field name="period_start" class="oe_inline"/>
+                                                            <field name="period_end" class="oe_inline"/>
+                                                        </div>
+                                                    </group>
+                                                </sheet>
+                                            </form>
+                                        </field>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                        -->
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="blendx_security_role_view_tree" model="ir.ui.view">
+        <field name="name">blendx.security.role.tree</field>
+        <field name="model">blendx.security.role</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="user_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+    <record id="blendx_security_role_action" model="ir.actions.act_window">
+        <field name="name">Blendx User Roles</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">blendx.security.role</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" eval="blendx_security_role_view_search"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a new security role
+            </p>
+        </field>
+    </record>
+    <record id="blendx_security_role_action_form_only" model="ir.actions.act_window">
+        <field name="name">Blendx User Role</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">blendx.security.role</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem name="Blendx User Roles"
+              id="menu_security_roels"
+              parent="base.menu_users"
+              sequence="4"
+              action="blendx_security_role_action"
+              groups="base.group_erp_manager"
+    />
+
+    <data noupdate="1">
+        <record id="security_groups_view" model="ir.ui.view">
+            <field name="name">blendx.security.role.groups</field>
+            <field name="model">blendx.security.role</field>
+            <field name="inherit_id" ref="blendx_user_roles.blendx_security_role_view_form"/>
+            <field name="arch" type="xml">
+                <field name="group_ids" position="after"/>
+            </field>
+        </record>
+    </data>
+
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="cm_role_form_view" model="ir.ui.view">
+        <field name="name">cm.role.form</field>
+        <field name="model">cm.role</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="deprecated"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="cm_role_tree_view" model="ir.ui.view">
+        <field name="name">cm.role.tree</field>
+        <field name="model">cm.role</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="deprecated"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="cm_role_action" model="ir.actions.act_window">
+        <field name="name">Role</field>
+        <field name="res_model">cm.role</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="cm_role_menu" name="Role"
+              parent="core_module.core_module_config_menu" action="cm_role_action"/>
+
+</odoo>

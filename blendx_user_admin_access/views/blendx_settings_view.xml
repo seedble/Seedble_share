@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+
+        <menuitem id="menu_blendx_settings" name="Blendx Settings" groups="group_blendx_settings_reader"
+                  sequence="549"/>
+
+        <menuitem id="blendx_user_roles.menu_security_roels" parent="menu_blendx_settings" name="Blendx User Roles"
+                  groups="group_blendx_settings_reader"/>
+
+        <menuitem id="blendx_user_roles.blendx_intent_menu" name="Blendx Intent" parent='menu_blendx_settings'
+                  groups="group_blendx_settings_reader" sequence="7"/>
+
+        <menuitem id="blendx_user_roles.menu_group_category" name="Group Category" parent='menu_blendx_settings'
+                  groups="group_blendx_settings_reader"/>
+
+    </data>
+</odoo>

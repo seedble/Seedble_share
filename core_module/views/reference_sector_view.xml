@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="reference_sector_form_view" model="ir.ui.view">
+        <field name="name">reference.sector.form</field>
+        <field name="model">reference.sector</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="deprecated"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="reference_sector_tree_view" model="ir.ui.view">
+        <field name="name">reference.sector.tree</field>
+        <field name="model">reference.sector</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="deprecated"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="reference_sector_action" model="ir.actions.act_window">
+        <field name="name">Reference Sector</field>
+        <field name="res_model">reference.sector</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="core_module_menu" name="Core Module" sequence="1" groups="core_module.group_core_module_reader"/>
+
+    <menuitem id="core_module_config_menu" name="Configuration" parent="core_module.core_module_menu"
+              groups="core_module.group_core_module_admin"/>
+
+    <menuitem id="reference_sector_menu" name="Reference Sector"
+              parent="core_module.core_module_config_menu" action="reference_sector_action"/>
+
+</odoo>

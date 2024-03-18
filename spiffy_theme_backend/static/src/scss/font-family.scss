@@ -1,0 +1,52 @@
+$spiffy_fonts: (
+    lato: 'Lato',
+    montserrat: 'Montserrat',
+    open_sans: 'OpenSans',
+    oswald: 'Oswald',
+    raleway: 'Raleway',
+    roboto: 'Roboto',
+    poppins: 'Poppins',
+    rubik: 'Rubik',
+    inter: 'Inter',
+    josefin_sans: 'JosefinSans',
+    varela_round: 'VarelaRound',
+    manrope: 'Manrope',
+    Nunito_Sans: 'NunitoSans',
+    almarai: 'Almarai',
+    tajawal: 'Tajawal',
+    cairo: 'Cairo'
+) !default;
+
+$spiffy-fonts-path: '../../lib';
+
+@each $font, $name in $spiffy_fonts {
+    @font-face{
+        font-family: "#{$name}";
+        src: url("#{$spiffy-fonts-path}/#{$name}/#{$name}-Regular.ttf") format("truetype");
+    }
+}
+
+body{
+    @each $font, $name in $spiffy_fonts {
+        &.font_family_#{$font} {
+            font-family: #{$name};
+        }
+    }
+    .dynamic_data{
+        #font_family{
+            .text-style-design{
+                font-size: 16px;
+            }
+            @each $font, $name in $spiffy_fonts {
+                .font_family_#{$font} {
+                    .text-style-design{
+                        font-family: #{$name};
+                    }
+                }
+            }
+        }
+    }
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-family: inherit;
+    }
+}

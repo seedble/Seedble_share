@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<!--        <record id="res_users_job_family_form_view" model="ir.ui.view">-->
+<!--            <field name="name">res.users.job.family.form.view</field>-->
+<!--            <field name="model">res.users.job.family</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Job Family">-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="jf_name"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="parent_id"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+                <record id="res_users_job_family_tree_view" model="ir.ui.view">
+                    <field name="name">res_users_job_family_tree_view</field>
+                    <field name="model">res.users.job.family</field>
+                    <field name="arch" type="xml">
+                        <tree string="Job Family">
+                            <field name="jf_name"/>
+                            <field name="parent_id"/>
+                            <field name="create_date"/>
+                        </tree>
+                    </field>
+                </record>
+
+        <!--        <record id="res_users_job_family_search_view" model="ir.ui.view">-->
+        <!--            <field name="name">ProjectName.res_users_job_family.search</field>-->
+        <!--            <field name="model">ProjectName.res_users_job_family</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <search string="ModelTitle">-->
+        <!--                    <group expand="1" string="Group By">-->
+        <!--                        <filter string="Example Field" name="example_field" domain="[]"-->
+        <!--                                context="{'group_by':'example_field'}"/>-->
+        <!--                    </group>-->
+        <!--                </search>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <record id="res_users_job_family_act_window" model="ir.actions.act_window">
+            <field name="name">Res Users Job Family</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.users.job.family</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Job Family" id="res_users_job_family_menu"
+                  parent="blendx_user_admin_access.menu_blendx_settings_config"
+                  action="res_users_job_family_act_window"/>
+
+    </data>
+</odoo>

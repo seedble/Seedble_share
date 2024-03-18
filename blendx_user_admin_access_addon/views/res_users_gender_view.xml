@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="res_users_gender_form_view" model="ir.ui.view">
+            <field name="name">res.users.gender.form.view</field>
+            <field name="model">res.users.gender</field>
+            <field name="arch" type="xml">
+                <form string="Res Users Gender">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="create_date"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="res_users_gender_tree_view" model="ir.ui.view">
+            <field name="name">res.users.gender.tree.view</field>
+            <field name="model">res.users.gender</field>
+            <field name="arch" type="xml">
+                <tree string="Res Users Gender">
+                    <field name="name"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="res_users_gender_act_window" model="ir.actions.act_window">
+            <field name="name">Res Users Gender</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.users.gender</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Res Users Gender" id="res_users_gender_menu"
+                  parent="blendx_user_admin_access.menu_blendx_settings_config" action="res_users_gender_act_window"/>
+
+    </data>
+</odoo>

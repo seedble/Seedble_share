@@ -1,0 +1,36 @@
+body.o_web_client{
+
+    .o_control_panel{
+        .breadcrumb {
+            .breadcrumb-item.active {
+                color: var(--biz-theme-btn-color) !important;
+            }
+        }
+
+        .o_cp_switch_buttons {
+            .btn {
+                &.active {
+                    background-color: var(--biz-theme-btn-color) !important;
+                }
+            }
+        }
+
+        .o_cp_searchview {
+            .o_searchview {
+                .o_searchview_facet {
+                    .o_facet_remove {
+                        color: var(--biz-theme-btn-color) !important;
+                    }
+
+                    .o_searchview_facet_label {
+                        background-color: var(--biz-theme-btn-color) !important;
+                    }
+
+                    .o_facet_values {
+                        border-color: var(--biz-theme-btn-color) !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_users_gender_reader,access blendx res users gender reader,model_res_users_gender,blendx_user_admin_access.group_blendx_settings_reader,1,0,0,0
+access_res_users_gender_admin,access blendx res users gender admin,model_res_users_gender,blendx_user_admin_access.group_blendx_settings_admin,1,1,1,1
+
+access_res_users_job_family_reader,access blendx res users job family reader,model_res_users_job_family,blendx_user_admin_access.group_blendx_settings_reader,1,0,0,0
+access_res_users_job_family_admin,access blendx res users job family admin,model_res_users_job_family,blendx_user_admin_access.group_blendx_settings_admin,1,1,1,1
+
+access_res_users_management_level_reader,access blendx res users management level reader,model_res_users_management_level,blendx_user_admin_access.group_blendx_settings_reader,1,0,0,0
+access_res_users_management_level_admin,access blendx res users management level admin,model_res_users_management_level,blendx_user_admin_access.group_blendx_settings_admin,1,1,1,1
+
+access_res_users_employee_type_reader,access blendx res users employee type reader,model_res_users_employee_type,blendx_user_admin_access.group_blendx_settings_reader,1,0,0,0
+access_res_users_employee_type_admin,access blendx res users employee type admin,model_res_users_employee_type,blendx_user_admin_access.group_blendx_settings_admin,1,1,1,1
+
+access_res_users_division_reader,access blendx res users division reader,model_res_users_division,blendx_user_admin_access.group_blendx_settings_reader,1,0,0,0
+access_res_users_division_admin,access blendx res users division admin,model_res_users_division,blendx_user_admin_access.group_blendx_settings_admin,1,1,1,1

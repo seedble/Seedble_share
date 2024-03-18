@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="template_backend_config_data_inherit" name="Dynamic Data template Backend Inherit"
+              inherit_id="spiffy_theme_backend.template_backend_config_data">
+        <xpath expr="//input[@id='primary_text']/.." position="after">
+            <div class="pb-2 d-flex">
+                <div class="w-50">Button Color</div>
+                <input type="color" class="primary_btn_color border border-dark" id="primary_btn" name="Primary button"
+                       t-att-value="config_vals.light_primary_btn_color"/>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- coding: utf-8 -*- -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- Developed by Bizople Solutions Pvt. Ltd. -->
+<odoo>
+	<record id="push_notifcation_tree_view" model="ir.ui.view">
+		<field name="name">push.notification.menu.tree.view</field>
+		<field name="model">push.notification.menu</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Backend Config">
+				<field name="model_name"/>
+				<field name="menu_id"/>
+                <field name="action_id"/>
+			</tree>
+		</field>
+	</record>
+
+    <record id="push_notifcation_form_view" model="ir.ui.view">
+		<field name="name">push.notification.menu.form.view</field>
+		<field name="model">push.notification.menu</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Push Notification Menu">
+                <sheet>
+                    <group>
+                        <field name="model_name"/>
+                        <field name="menu_id"/>
+                        <field name="action_id"/>
+                    </group>
+                </sheet>
+            </form>
+		</field>
+	</record>
+
+    <record id="action_push_notification_menu" model="ir.actions.act_window">
+        <field name="name">Push Notification Menu</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">push.notification.menu</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- <menuitem id="bizople_push_notifcation_menu" name="Spiffy Push Notification Menu" 
+			parent="spiffy_theme_backend.bizople_backend_theme_configuration_mainmenu" action="action_push_notification_menu"/> -->
+</odoo>

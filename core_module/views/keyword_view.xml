@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="cm_keyword_form_view" model="ir.ui.view">
+        <field name="name">cm.keyword.form</field>
+        <field name="model">cm.keyword</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="deprecated"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="cm_keyword_tree_view" model="ir.ui.view">
+        <field name="name">cm.keyword.tree</field>
+        <field name="model">cm.keyword</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="deprecated"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="cm_keyword_action" model="ir.actions.act_window">
+        <field name="name">Keyword</field>
+        <field name="res_model">cm.keyword</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="cm_keyword_menu" name="Keyword"
+              parent="core_module.core_module_config_menu" action="cm_keyword_action"/>
+
+</odoo>

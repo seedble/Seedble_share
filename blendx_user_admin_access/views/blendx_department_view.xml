@@ -1,0 +1,97 @@
+<odoo>
+    <data>
+
+        <record id="action_blendx_department_company" model="ir.actions.act_window">
+            <field name="name">Blendx Department Company</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">blendx.department.company</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="submenu_blendx_department_company" action="action_blendx_department_company"
+                  parent="menu_blendx_settings_config"
+                  name="Department Company" groups="group_blendx_settings_user" sequence="3"/>
+
+
+        <record id="action_blendx_department_team_role" model="ir.actions.act_window">
+            <field name="name">Blendx Department Team Role</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">department.team.role</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="submenu_blendx_department_team_role" action="action_blendx_department_team_role"
+                  parent="menu_blendx_settings_config"
+                  name="Department Team Role" groups="group_blendx_settings_user" sequence="4"/>
+
+        <record id="blendx_department_form_view" model="ir.ui.view">
+            <field name="name">blendx.department.form.view</field>
+            <field name="model">blendx.department</field>
+            <field name="arch" type="xml">
+                <form string="Blendx Department">
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" required="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="description" required="1"/>
+                                <field name="department_company_id"/>
+                                <field name="organization_typology"/>
+                            </group>
+                            <group>
+                                <field name="parent_id"/>
+                                <field name="manager_id" widget="many2one_avatar_left"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="teams" string="Teams">
+                                <field name="team_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="team_member_id" required="1"/>
+                                        <!-- domain="[('user_id','!=',False)]"-->
+                                        <field name="blendx_department_id" readonly="1"/>
+                                        <!-- <field name="department_typology" invisible="1"/>-->
+                                        <!-- <field name="team_role_id" domain="[('typology', '=', department_typology)]"/>-->
+                                        <field name="team_role_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="blendx_department_tree_view" model="ir.ui.view">
+            <field name="name">blendx.department.tree.view</field>
+            <field name="model">blendx.department</field>
+            <field name="arch" type="xml">
+                <tree string="Blendx Department">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="department_company_id"/>
+                    <field name="parent_id"/>
+                    <field name="manager_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_blendx_department" model="ir.actions.act_window">
+            <field name="name">Blendx Department</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">blendx.department</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_blendx_department" action="action_blendx_department" parent="menu_blendx_settings"
+                  name="Blendx Department" groups="group_blendx_settings_user" sequence="8"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="ir_module_category_form_view_ext" model="ir.ui.view">
+        <field name="model">ir.module.category</field>
+        <field name="inherit_id" ref="base.view_module_category_form"/>
+        <field name="arch" type="xml">
+            <field name="sequence" position="after">
+                <field name="is_managed_with_blendx_user_roles" groups="base.group_no_one"/>
+                <field name="blendx_intent_id" groups="base.group_no_one"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="ir_module_category_action" model="ir.actions.act_window">
+        <field name="name">Group Category</field>
+        <field name="res_model">ir.module.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Group Category"
+              id="menu_group_category"
+              parent="base.menu_users"
+              sequence="3"
+              action="ir_module_category_action"
+              groups="base.group_erp_manager"
+    />
+
+</odoo>

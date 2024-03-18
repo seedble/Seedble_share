@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="res_users_employee_type_tree_view" model="ir.ui.view">
+            <field name="name">res_users_employee_type_tree_view</field>
+            <field name="model">res.users.employee.type</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Type">
+                    <field name="et_name"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="res_users_employee_type_act_window" model="ir.actions.act_window">
+            <field name="name">Employee Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.users.employee.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Employee Type" id="res_users_employee_type_menu"
+                  parent="blendx_user_admin_access.menu_blendx_settings_config"
+                  action="res_users_employee_type_act_window"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1444px" height="75px" viewBox="0 0 1444 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 6</title>
+    <defs>
+        <polygon id="path-1" points="0.739013658 0 1439.00624 0 1439.00624 75 0.739013658 73.9825007"></polygon>
+        <polygon id="path-3" points="0.739013658 0 1439.00624 0 1439.00624 75 0.739013658 73.9825007"></polygon>
+        <polygon id="path-5" points="0 0 1438.26723 0 1438.26723 75 0 73.9825007"></polygon>
+        <polygon id="path-7" points="0 0 1443 0 1443 75 0 73.9825007"></polygon>
+        <linearGradient x1="0%" y1="50%" x2="82.2186721%" y2="50%" id="linearGradient-9">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header_Pannel" transform="translate(1.000000, 0.000000)">
+            <g id="Group-6" transform="translate(-1.000000, -0.000000)">
+                <g id="Group">
+                    <g id="Group-3">
+                        <g id="Oval" transform="translate(1.000000, 0.000000)">
+                            <g id="Mask" transform="translate(1.079132, 0.000000)" fill="#F1FAFF" fill-rule="nonzero">
+                                <polygon id="path-1" points="0.739013658 0 1439.00624 0 1439.00624 75 0.739013658 73.9825007"></polygon>
+                            </g>
+                            <g id="Clipped" transform="translate(1.079132, 0.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="path-1"></g>
+                                <path d="M338.5,1 C385.720346,1 424,39.2796539 424,86.5 C424,133.720346 385.720346,172 338.5,172 C291.279654,172 253,133.720346 253,86.5 C253,39.2796539 291.279654,1 338.5,1 Z M338.5,41 C313.371044,41 293,61.3710439 293,86.5 C293,111.628956 313.371044,132 338.5,132 C363.628956,132 384,111.628956 384,86.5 C384,61.3710439 363.628956,41 338.5,41 Z" id="Oval" fill="#076094" fill-rule="nonzero" opacity="0.07" mask="url(#mask-2)"></path>
+                            </g>
+                            <g id="Oval-Copy-Clipped" transform="translate(1.079132, 0.000000)">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <g id="path-1"></g>
+                                <path d="M497,-104 C544.462585,-104 583,-65.7545355 583,-18.5 C583,28.7545355 544.462585,67 497,67 C449.537415,67 411,28.7545355 411,-18.5 C411,-65.7545355 449.537415,-104 497,-104 Z M497,-64 C471.560998,-64 451,-43.5947667 451,-18.5 C451,6.59476672 471.560998,27 497,27 C522.439002,27 543,6.59476672 543,-18.5 C543,-43.5947667 522.439002,-64 497,-64 Z" id="Oval-Copy" fill="#076094" fill-rule="nonzero" opacity="0.07" mask="url(#mask-4)"></path>
+                            </g>
+                            <g id="Group-Copy-Clipped" transform="translate(2.818146, 0.000000)">
+                                <mask id="mask-6" fill="white">
+                                    <use xlink:href="#path-5"></use>
+                                </mask>
+                                <g id="path-1"></g>
+                            </g>
+                            <g id="Group-Copy-2-Clipped" transform="translate(0.000000, 0.000000)">
+                                <mask id="mask-8" fill="white">
+                                    <use xlink:href="#path-7"></use>
+                                </mask>
+                                <g id="path-1"></g>
+                                <g id="Group-Copy-2" opacity="0.37991333" mask="url(#mask-8)">
+                                    <g transform="translate(1125.000000, 12.000000)">
+                                        <g id="Group" transform="translate(0.000000, 0.000000)">
+                                            <circle id="Oval-Copy-23" fill="#B4DBF1" fill-rule="nonzero" cx="2" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-22" fill="#B4DBF1" fill-rule="nonzero" cx="18" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-21" fill="#B4DBF1" fill-rule="nonzero" cx="34" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-20" fill="#B4DBF1" fill-rule="nonzero" cx="49" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-19" fill="#B4DBF1" fill-rule="nonzero" cx="65" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-18" fill="#B4DBF1" fill-rule="nonzero" cx="81" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-29" fill="#B4DBF1" fill-rule="nonzero" cx="2" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-28" fill="#B4DBF1" fill-rule="nonzero" cx="18" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-27" fill="#B4DBF1" fill-rule="nonzero" cx="34" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-26" fill="#B4DBF1" fill-rule="nonzero" cx="49" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-25" fill="#B4DBF1" fill-rule="nonzero" cx="65" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-24" fill="#B4DBF1" fill-rule="nonzero" cx="81" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-35" fill="#B4DBF1" fill-rule="nonzero" cx="2" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-34" fill="#B4DBF1" fill-rule="nonzero" cx="18" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-33" fill="#B4DBF1" fill-rule="nonzero" cx="34" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-32" fill="#B4DBF1" fill-rule="nonzero" cx="49" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-31" fill="#B4DBF1" fill-rule="nonzero" cx="65" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-30" fill="#B4DBF1" fill-rule="nonzero" cx="81" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-41" fill="#B4DBF1" fill-rule="nonzero" cx="2" cy="43" r="2"></circle>
+                                            <circle id="Oval-Copy-40" fill="#B4DBF1" fill-rule="nonzero" cx="18" cy="43" r="2"></circle>
+                                            <circle id="Oval-Copy-39" fill="#B4DBF1" fill-rule="nonzero" cx="34" cy="43" r="2"></circle>
+                                            <circle id="Oval-Copy-38" fill="#B4DBF1" fill-rule="nonzero" cx="49" cy="43" r="2"></circle>
+                                            <circle id="Oval-Copy-37" fill="#B4DBF1" fill-rule="nonzero" cx="65" cy="43" r="2"></circle>
+                                            <circle id="Oval-Copy-36" fill="#B4DBF1" fill-rule="nonzero" cx="81" cy="43" r="2"></circle>
+                                        </g>
+                                        <g id="Group" transform="translate(94.079132, -0.000000)" fill="#B4DBF1" fill-rule="nonzero">
+                                            <circle id="Oval-Copy-23" cx="2" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-22" cx="18" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-21" cx="34" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-20" cx="49" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-19" cx="65" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-18" cx="81" cy="2" r="2"></circle>
+                                            <circle id="Oval-Copy-29" cx="2" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-28" cx="18" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-27" cx="34" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-26" cx="49" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-25" cx="65" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-24" cx="81" cy="16" r="2"></circle>
+                                            <circle id="Oval-Copy-35" cx="2" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-34" cx="18" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-33" cx="34" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-32" cx="49" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-31" cx="65" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-30" cx="81" cy="29" r="2"></circle>
+                                            <circle id="Oval-Copy-41" cx="2" cy="43" r="2"></circle>
+                                            <circle id="Oval-Copy-40" cx="18" cy="43" r="2"></circle>
+                                            <circle id="Oval-Copy-39" cx="34" cy="43" r="2"></circle>
+                                            <circle id="Oval-Copy-38" cx="49" cy="43" r="2"></circle>
+                                            <circle id="Oval-Copy-37" cx="65" cy="43" r="2"></circle>
+                                            <circle id="Oval-Copy-36" cx="81" cy="43" r="2"></circle>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <polygon id="Rectangle" fill="url(#linearGradient-9)" fill-rule="nonzero" points="0 0 703.662603 0 703.662603 74 0 74"></polygon>
+                    </g>
+                    <g id="Group-4" transform="translate(1377.079132, 28.000000)" stroke="#FFFFFF" stroke-width="2">
+                        <path d="M7,10 C9.76142375,10 12,7.76142375 12,5 C12,2.23857625 9.76142375,0 7,0 C4.23857625,0 2,2.23857625 2,5 C2,7.76142375 4.23857625,10 7,10 Z" id="Oval"></path>
+                        <path d="M0,19 L0,17 C-2.705415e-16,14.790861 1.790861,13 4,13 L10,13 C12.209139,13 14,14.790861 14,17 L14,19 L14,19" id="Path-7"></path>
+                    </g>
+                </g>
+                <line x1="1441.21264" y1="74.5" x2="2.07913182" y2="74.5" id="Path-7" stroke="#C4DBEB"></line>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,9 @@
+body.o_web_client {
+
+    .btn-primary, .btn-fill-primary {
+        &.reload_view{
+            background-color: var(--biz-theme-btn-color) !important;
+            border-color: var(--biz-theme-btn-color) !important;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+body.o_web_client {
+
+    .bookmark_section, .magnifier_section, .fullscreen_section, .search_view, .fav_app_drawer {
+        .dropdown-toggle, .magnifier_btn, .full_screen, .search_bar, .fav_app_drawer_btn {
+            background-color: var(--biz-theme-btn-color) !important;
+            border-color: var(--biz-theme-btn-color) !important;
+        }
+    }
+
+}

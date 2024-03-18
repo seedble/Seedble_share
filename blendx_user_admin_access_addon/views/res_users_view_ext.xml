@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_users_view_form_inherit" model="ir.ui.view">
+            <field name="name">res.users.view.form.inherit</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="blendx_user_admin_access.view_users_form_blendx"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet//group[@name='group_main_blendx_user']" position="after">
+                    <notebook>
+                        <page name="information" string="Information">
+                            <group>
+                                <group>
+                                    <field name="work_phone" widget="phone"/>
+                                    <field name="work_country"/>
+                                    <field name="gender"/>
+                                    <field name="management_level_id"/>
+                                    <field name="employee_type_id"/>
+                                    <field name="seniority_date"/>
+                                    <field name="level_03_manager"/>
+                                    <field name="level_04_manager"/>
+                                    <field name="res_company_id"/>
+                                </group>
+                                <group>
+                                    <field name="location_code"/>
+                                    <field name="birth_date"/>
+                                    <field name="job_family_id"/>
+                                    <field name="job_family_group_id" domain="[('parent_id','=',False)]"/>
+                                    <field name="length_service"/>
+                                    <field name="location"/>
+                                    <field name="level_03_manager_id"/>
+                                    <field name="level_04_manager_id"/>
+                                    <field name="division_id"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Device Settings" name="device_settings">
+                            <group>
+                                <group>
+                                    <field name="ds_uuid"/>
+                                    <field name="ds_current_operator_name"/>
+                                    <field name="ds_email"/>
+                                    <field name="ds_language"/>
+                                    <field name="ds_manufacturer"/>
+                                    <field name="ds_platform_name"/>
+                                    <field name="ds_status"/>
+                                </group>
+                                <group>
+                                    <field name="ds_current_country_name"/>
+                                    <field name="ds_device_owner"/>
+                                    <field name="ds_home_country_name"/>
+                                    <field name="ds_last_check_in"/>
+                                    <field name="ds_model"/>
+                                    <field name="ds_registration_date"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+
+        <record id="action_res_blendx_job" model="ir.actions.act_window">
+            <field name="name">Blendx Job</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.blendx.job</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_blendx_settings_config" parent="menu_blendx_settings" name="Configuration"
+                  sequence="10" groups="group_blendx_settings_admin"/>
+
+        <menuitem action="action_res_blendx_job" id="submenu_action_job_blendx" parent="menu_blendx_settings_config"
+                  sequence="1"/>
+
+        <record id="action_res_blendx_seniority" model="ir.actions.act_window">
+            <field name="name">Seniority Level</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.blendx.seniority</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="action_res_blendx_seniority" id="submenu_action_seniority_level" parent="menu_blendx_settings_config"
+                  sequence="2"/>
+
+    </data>
+</odoo>

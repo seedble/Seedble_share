@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!-- Blendx Settings groups and category This is only for module(Blendx Settings) access.-->
+        <record model="ir.module.category" id="category_blendx_settings">
+            <field name="name">Blendx Settings</field>
+            <field name="sequence">102</field>
+        </record>
+
+        <record model="res.groups" id="group_blendx_settings_reader">
+            <field name="name">Reader</field>
+            <field name="category_id" ref="category_blendx_settings"/>
+        </record>
+
+        <record model="res.groups" id="group_blendx_settings_user">
+            <field name="name">User</field>
+            <field name="category_id" ref="category_blendx_settings"/>
+            <field name="implied_ids" eval="[(4, ref('group_blendx_settings_reader'))]"/>
+        </record>
+
+        <record model="res.groups" id="group_blendx_settings_admin">
+            <field name="name">Admin</field>
+            <field name="category_id" ref="category_blendx_settings"/>
+            <field name="implied_ids" eval="[(4, ref('group_blendx_settings_user'))]"/>
+        </record>
+
+
+        <!-- Blendx User Admin groups and category This Group category for all users. -->
+        <record model="ir.module.category" id="category_blendx_user_admin">
+            <field name="name">Blendx User Admin</field>
+            <field name="sequence">101</field>
+        </record>
+
+        <record model="res.groups" id="group_blendx_user">
+            <field name="name">Blendx User</field>
+            <field name="category_id" ref="blendx_user_admin_access.category_blendx_user_admin"/>
+        </record>
+
+        <record model="res.groups" id="group_blendx_admin">
+            <field name="name">Blendx Admin</field>
+            <field name="implied_ids" eval="[(4, ref('blendx_user_admin_access.group_blendx_user'))]"/>
+            <field name="category_id" ref="blendx_user_admin_access.category_blendx_user_admin"/>
+        </record>
+
+    </data>
+</odoo>

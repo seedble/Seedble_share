@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="res_users_division_tree_view" model="ir.ui.view">
+            <field name="name">res_users_division_tree_view</field>
+            <field name="model">res.users.division</field>
+            <field name="arch" type="xml">
+                <tree string="Division">
+                    <field name="div_name"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="res_users_division_act_window" model="ir.actions.act_window">
+            <field name="name">Division</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.users.division</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Division" id="res_users_division_menu"
+                  parent="blendx_user_admin_access.menu_blendx_settings_config" action="res_users_division_act_window"/>
+
+    </data>
+</odoo>

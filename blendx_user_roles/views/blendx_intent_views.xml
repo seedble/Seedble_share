@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="blendx_inten_form_view" model="ir.ui.view">
+        <field name="name">blendx.intent.form</field>
+        <field name="model">blendx.intent</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="blendx_intent_name"/>
+                        <h1>
+                            <field name="blendx_intent_name" required="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="blendx_intent_deprecated"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="blendx_inten_tree_view" model="ir.ui.view">
+        <field name="name">blendx.intent.tree</field>
+        <field name="model">blendx.intent</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="blendx_intent_name"/>
+                <field name="blendx_intent_deprecated"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="blendx_inten_action" model="ir.actions.act_window">
+        <field name="name">Blendx Intent</field>
+        <field name="res_model">blendx.intent</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="blendx_intent_menu" name="Blendx Intent" parent='base.menu_users' action="blendx_inten_action"
+              groups="base.group_erp_manager,base.group_no_one"/>
+</odoo>
