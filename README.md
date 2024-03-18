@@ -7,7 +7,7 @@ Va utilizzato il code base di Odoo Community versione 16.0
 
 Moduli base:
 
-Core module (core_module)
+- Core module (core_module)
 - Simplyfy Access Management (simplify_access_management)
 - Simplyfy Access Management Extended (simplify_access_management_extended)
 - BlendX Settings (blendx_user_admin_access)
