@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="blendx_base.Many2OneAvatarLeft" owl="1">
+        <div class="d-flex" t-att-data-tooltip="props.value[1]">
+            <Many2OneField t-props="props"/>
+            <span class="o_m2o_avatar" t-if="['res.users', 'res.partner'].includes(relation)">
+                <t t-if="props.readonly">
+                    <span t-if="props.value === false and !props.readonly" class="o_m2o_avatar_empty"/>
+                    <img class="image_avatar_custom_readonly" t-if="props.value !== false" alt="Avatar"
+                         t-attf-src="/web/image/{{relation}}/{{props.value[0]}}/image_128"/>
+                </t>
+                <t t-else="">
+                    <span t-if="props.value === false and !props.readonly" class="o_m2o_avatar_empty"/>
+                    <img class="image_avatar_custom" t-if="props.value !== false" alt="Avatar"
+                         t-attf-src="/web/image/{{relation}}/{{props.value[0]}}/image_128"/>
+                </t>
+            </span>
+        </div>
+    </t>
+
+</templates>

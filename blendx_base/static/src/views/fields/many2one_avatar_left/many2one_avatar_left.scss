@@ -1,0 +1,13 @@
+.image_avatar_custom{
+    height : var(--input-height);
+    width: var(--input-height);
+    border-radius: 5px;
+}
+
+.image_avatar_custom_readonly{
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    object-fit: cover;
+    margin-left: 4px;
+}
