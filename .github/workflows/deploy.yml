@@ -21,6 +21,6 @@ jobs:
             git config --global --add safe.directory /odoo/custom/Seedble_share
             remote_repo="https://${{ secrets.GIT_TOKEN }}:${{ secrets.GIT_TOKEN }}@${{ secrets.GIT_URL }}"
             git checkout main
-            git pull $remote_repo staging
+            git pull $remote_repo main
             sudo python3 -m pip install -r requirements.txt
             sudo service odoo-server restart
