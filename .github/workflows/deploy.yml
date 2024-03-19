@@ -1,0 +1,26 @@
+# This workflow will pull and deploy on server
+name: Remote update execution
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Executing remote ssh commands using key
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.STAGE_SERVER_HOST }}
+        username: ${{ secrets.STAGE_SERVER_USERNAME }}
+        key: ${{ secrets.STAGE_SERVER_KEY }}
+        passphrase: ${{ secrets.STAGE_SERVER_KEY_PASSPHRASE }}
+        script: |
+            cd /odoo/custom/Seedble_share
+            git config --global --add safe.directory /odoo/custom/Seedble_share
+            remote_repo="https://${{ secrets.GIT_TOKEN }}:${{ secrets.GIT_TOKEN }}@${{ secrets.GIT_URL }}"
+            git checkout main
+            git pull $remote_repo staging
+            sudo python3 -m pip install -r requirements.txt
+            sudo service odoo-server restart
